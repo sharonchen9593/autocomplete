@@ -1,0 +1,56 @@
+.app {
+  display: flex;
+  font: 16px Arial;
+}
+
+.search {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.search-bar {
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.search-results {
+  margin: 0 auto;
+}
+
+.search-item {
+  margin: 5px;
+  padding: 10px;
+}
+
+.search-item:hover {
+  color: #00bcd4;
+  cursor: pointer;
+}
+
+.search-item:focus {
+  color: #00bcd4;
+  outline: none;
+}
+
+.selected {
+  color: #00bcd4;
+  outline: none;
+}
+
+.results {
+  color: #a7a7a7;
+}
+
+.selected-item {
+  text-align: center;
+}
