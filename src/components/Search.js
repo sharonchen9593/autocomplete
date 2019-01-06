@@ -41,7 +41,7 @@ class Search extends Component {
 
   render() {
     const { displayData } = this.state;
-    const { title, selected, inputRef } = this.props;
+    const { title, inputRef } = this.props;
     return (
       <div className="search">
         <div className="title">{title}</div>
