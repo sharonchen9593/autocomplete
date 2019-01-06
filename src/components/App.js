@@ -28,17 +28,13 @@ class App extends React.Component {
   renderCitiesData = value => {
     const result = cities
       .filter(city => {
-        return city.toLowerCase().includes(value.toLowerCase());
+        return city.toLowerCase().indexOf(value.toLowerCase()) === 0;
       })
       .map(city => {
         return (
           <div
             key={city}
-            className={
-              this.state.selectedCity === city
-                ? "search-item selected"
-                : "search-item"
-            }
+            className="search-item"
             value={city}
             onClick={this.handleCityClick}
           >
@@ -58,18 +54,14 @@ class App extends React.Component {
   renderBooksData = value => {
     const result = books
       .filter(book => {
-        return book.title.toLowerCase().includes(value.toLowerCase());
+        return book.title.toLowerCase().indexOf(value.toLowerCase()) === 0;
       })
       .map(book => {
         return (
           <div
             key={book.title}
-            className={
-              this.state.selectedBook.includes(book.title)
-                ? "search-item selected"
-                : "search-item"
-            }
-            value={`${book.title} by ${book.author}`}
+            className="search-item"
+            value={book.title}
             onClick={this.handleBookClick}
           >
             {book.title} by {book.author}

@@ -37,20 +37,6 @@
   cursor: pointer;
 }
 
-.search-item:focus {
-  color: #00bcd4;
-  outline: none;
-}
-
-.selected {
-  color: #00bcd4;
-  outline: none;
-}
-
 .results {
   color: #a7a7a7;
-}
-
-.selected-item {
-  text-align: center;
 }

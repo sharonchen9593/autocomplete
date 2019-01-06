@@ -10,6 +10,12 @@ class Search extends Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selected !== this.props.selected) {
+      this.setState({ value: nextProps.selected });
+    }
+  }
+
   handleChange = e => {
     const value = e.target.value;
     const displayData = value.length >= 3 ? true : false;
@@ -47,9 +53,6 @@ class Search extends Component {
         <div className="search-results">
           {!displayData && this.renderPrompt()}
           {displayData && this.renderData()}
-        </div>
-        <div className="selected-item">
-          {selected && `You selected: ${selected}`}
         </div>
       </div>
     );
