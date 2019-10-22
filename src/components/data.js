@@ -51,7 +51,11 @@ const books = [
   {
     title: "Tristram Shandy",
     author: "Laurence Sterne"
-  }
+  },
+  {
+    title: "Jim Shandy",
+    author: "Laurence Sterne"
+  },
 ];
 
 export { cities, books };
